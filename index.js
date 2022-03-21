@@ -11,7 +11,7 @@ const hpp = require('hpp');
 const path = require('path');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-
+const compression = require('compression');
 
 //my modules
 const userRoutes = require('./routes/userRoutes');
@@ -58,6 +58,7 @@ app.use(function(req, res, next) {
     next(); 
 })
 app.use(cors());
+app.use(compression());
 
 //Routes
 app.use('/', viewRoutes);
