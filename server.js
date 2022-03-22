@@ -13,7 +13,8 @@ dotenv.config({path: './config.env'});
 
 
 const DB = process.env.MongoDB.replace('<password>', process.env.MongoDB_Password);
-mongoose.connect(DB, {
+const DB1 = "mongodb+srv://AnandPal:V3xGVYKheRnEWC49@cluster0.eajhy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+mongoose.connect(DB1, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
